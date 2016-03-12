@@ -13,6 +13,7 @@ Add the following in your root `composer.json` file:
 
 ```php
 "require": {
+    "vanio/symlink-handler": "dev-master",
     "components/jquery": "2.2.1"
 },
 "scripts": {
