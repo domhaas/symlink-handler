@@ -9,26 +9,25 @@ Installation can be done as usually using composer.
 `composer require vanio/symlink-handler`
 
 # Usage with example
-Add the following in your root composer.json file:
+Add the following in your root `composer.json` file:
 
 ```php
-    "require": {
-        "components/jquery": "2.2.1"
+"require": {
+    "components/jquery": "2.2.1"
+},
+"scripts": {
+    "post-install-cmd": [
+        "Vanio\\SymlinkHandler\\ScriptHandler::createSymlinks"
+    ],
+    "post-update-cmd": [
+        "Vanio\\SymlinkHandler\\ScriptHandler::createSymlinks"
+    ]
+},
+"extra": {
+    "symlinks": {
+        "components": "web/vendor/components"
     },
-    "scripts": {
-        "post-install-cmd": [
-            "Vanio\\SymlinkHandler\\ScriptHandler::createSymlinks"
-        ],
-        "post-update-cmd": [
-            "Vanio\\SymlinkHandler\\ScriptHandler::createSymlinks"
-        ]
-    },
-    "extra": {
-        "symlinks": {
-            "components": "web/vendor/components"
-        },
-    },
-}
+},
 ```
 
 After running either `composer install` or `composer update`, jquery will be accessible from your web folder `web/vendor/components/jquery/jquery.min.js`.
