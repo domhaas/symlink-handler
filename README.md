@@ -27,8 +27,8 @@ Add the following in your root `composer.json` file:
 "extra": {
     "symlinks": {
         "components": "web/vendor/components"
-    },
-},
+    }
+}
 ```
 
 After running either `composer install` or `composer update`, jquery will be accessible from your web folder `web/vendor/components/jquery/jquery.min.js`.
