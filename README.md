@@ -8,7 +8,7 @@ Composer script handling creation of symlinks from your selected installed depen
 Installation can be done as usually using composer.
 `composer require vanio/symlink-handler`
 
-# Usage with example
+# Usage
 Add the following in your root `composer.json` file:
 
 ```php
