@@ -1,6 +1,6 @@
 # Symlink Handler
 
-[![Build Status](https://api.travis-ci.org/vaniocz/symlink-handler.svg?branch=master)](https://travis-ci.org/vaniocz/symlink-handler) [![Coverage Status](https://coveralls.io/repos/github/vaniocz/symlink-handler/badge.svg?branch=master)](https://coveralls.io/github/vaniocz/symlink-handler?branch=master) [![License](https://poser.pugx.org/vanio/symlink-handler/license)](https://packagist.org/packages/vanio/symlink-handler)
+[![Build Status](https://api.travis-ci.org/vaniocz/symlink-handler.svg?branch=master)](https://travis-ci.org/vaniocz/symlink-handler) [![Coverage Status](https://coveralls.io/repos/github/vaniocz/symlink-handler/badge.svg?branch=master)](https://coveralls.io/github/vaniocz/symlink-handler?branch=master) ![PHP7](https://img.shields.io/badge/php-7-6B7EB9.svg) [![License](https://poser.pugx.org/vanio/symlink-handler/license)](https://packagist.org/packages/vanio/symlink-handler)
 
 Composer script handling creation of symlinks from your selected installed dependencies to location of your choice. 
 
