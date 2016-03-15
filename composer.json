@@ -23,7 +23,7 @@
         "psr-4": { "Vanio\\SymlinkHandler\\Tests\\": "tests/" }
     },
     "scripts": {
-        "test": "\"vendor/bin/phpunit\" & exit /b 0"
+        "test": "\"vendor/bin/phpunit\""
     },
     "extra": {
         "branch-alias": {
