@@ -31,7 +31,7 @@ class ScriptHandlerTest extends \PHPUnit_Framework_TestCase
         $composer->setConfig(new Config(false, __DIR__ . '/Fixtures'));
         $this->io = $this->getMockBuilder(NullIO::class)->enableProxyingToOriginalMethods()->getMock();
         $this->event = new Event('event', $composer, $this->io);
-        $this->filesystem = $this->getMock(Filesystem::class);
+        $this->filesystem = $this->createMock(Filesystem::class);
     }
 
     function test_symlinks_creation()
@@ -56,7 +56,7 @@ class ScriptHandlerTest extends \PHPUnit_Framework_TestCase
                 'foo' => 'bar',
                 'bar.txt' => 'foo.txt',
                 'invalid' => 'invalid',
-            ]
+            ],
         ]);
         ScriptHandler::createSymlinks($this->event, $this->filesystem);
     }

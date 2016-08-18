@@ -2,7 +2,6 @@
     "name": "vanio/symlink-handler",
     "description": "Composer script handling symlinks",
     "keywords": ["composer", "script", "symlink"],
-    "type": "library",
     "homepage": "https://github.com/vaniocz/symlink-handler",
     "license": "MIT",
     "authors": [
@@ -14,16 +13,20 @@
     },
     "require-dev": {
         "composer/composer": "^1.0@dev",
-        "phpunit/phpunit": "^5.2"
+        "phpunit/phpunit": "^5.5",
+        "vanio/coding-standards": "^0.1@dev"
     },
     "autoload": {
-        "psr-4": {"Vanio\\SymlinkHandler\\": "src/"}
+        "psr-4": {"Vanio\\SymlinkHandler\\": "src/"},
+        "exclude-from-classmap": ["/tests/"]
     },
     "autoload-dev": {
         "psr-4": { "Vanio\\SymlinkHandler\\Tests\\": "tests/" }
     },
     "scripts": {
-        "test": "\"vendor/bin/phpunit\""
+        "test": "\"vendor/bin/phpunit\"",
+        "lint": "\"vendor/bin/phpcs\" --standard=vendor/vanio/coding-standards/ruleset.xml --extensions=php --encoding=utf-8 --ignore=vendor .",
+        "fix": "\"vendor/bin/phpcbf\" --standard=vendor/vanio/coding-standards/ruleset.xml --extensions=php --encoding=utf-8 --no-patch --ignore=vendor ."
     },
     "extra": {
         "branch-alias": {
