@@ -6,10 +6,11 @@ use Composer\Config;
 use Composer\IO\NullIO;
 use Composer\Package\RootPackage;
 use Composer\Script\Event;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Filesystem\Filesystem;
 use Vanio\SymlinkHandler\ScriptHandler;
 
-class ScriptHandlerTest extends \PHPUnit_Framework_TestCase
+class ScriptHandlerTest extends TestCase
 {
     /** @var Event */
     private $event;
